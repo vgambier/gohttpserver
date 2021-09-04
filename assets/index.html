@@ -66,7 +66,7 @@
           </ul>
           <form class="navbar-form navbar-right">
             <div class="input-group">
-              <input type="text" name="search" class="form-control" placeholder="Search text" v-bind:value="search"
+              <input type="text" name="search" class="form-control" placeholder="Search" v-bind:value="search"
                 autofocus>
               <span class="input-group-btn">
                 <button class="btn btn-default" type="submit">
@@ -121,7 +121,7 @@
             <th>Name</th>
             <th>Size</th>
             <th class="hidden-xs">
-              <span style="cursor: pointer" v-on:click='mtimeTypeFromNow = !mtimeTypeFromNow'>ModTime</span>
+              <span style="cursor: pointer" v-on:click='mtimeTypeFromNow = !mtimeTypeFromNow'>Last modification</span>
             </th>
             <th>Actions</th>
           </tr>
@@ -143,7 +143,7 @@
             <td style="text-align: left">
               <template v-if="f.type == 'dir'">
                 <a class="btn btn-default btn-xs" href="{{getEncodePath(f)}}/?op=archive">
-                  <span class="hidden-xs">Archive</span> Zip
+                  Zip<span class="hidden-xs"> archive</span>
                   <span class="glyphicon glyphicon-download-alt"></span>
                 </a>
                 <button class="btn btn-default btn-xs" v-on:click="showInfo(f)">
@@ -189,7 +189,7 @@
           </h3>
         </div>
         <div class="panel-body">
-          <article class="markdown-body">{{{preview.contentHTML }}}
+          <article class="markdown-body">{{{preview.contentHTML}}}
           </article>
         </div>
       </div>
@@ -231,7 +231,7 @@
               <form action="#" class="dropzone" id="upload-form"></form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" @click="removeAllUploads">Remove All</button>
+              <button type="button" class="btn btn-default" @click="removeAllUploads">Clear all</button>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
