@@ -433,11 +433,6 @@ $(function () {
   // For page first loading
   loadFileList(location.pathname + location.search)
 
-  // update version
-  $.getJSON(URL_PREFIX + "/-/sysinfo", function (res) {
-    vm.version = res.version;
-  })
-
   var clipboard = new Clipboard('.btn');
   clipboard.on('success', function (e) {
     console.info('Action:', e.action);
