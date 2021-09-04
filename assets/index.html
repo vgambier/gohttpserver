@@ -17,6 +17,7 @@
 </head>
 
 <body id="app">
+  <div id="cover"></div>
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="container">
@@ -298,6 +299,9 @@
 
     ga('create', '[[.GoogleTrackerID]]', 'auto');
     ga('send', 'pageview');
+	$(window).on('load', function() { // Hide the page until it is fully loaded
+      $("#cover").hide();
+	});
   </script> [[ end ]]
 </body>
 
